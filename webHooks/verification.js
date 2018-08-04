@@ -2,7 +2,7 @@ module.exports = (req, res) => {
 	const hubChallenge = req.query['hub.challenge'];
 
 	const hubMode = req.query['hub.mode'];
-	const verifyTokenMatches = (req.query['hub.vertify_token'] === 'talktome');
+	const verifyTokenMatches = (req.query['hub.verify_token'] === 'talktome');
 
 	if(hubMode && verifyTokenMatches) {
 		console.log("Tokens match");
